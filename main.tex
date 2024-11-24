@@ -1,0 +1,72 @@
+\documentclass[a4paper,14pt]{article}
+
+\usepackage[left=1em,right=4em,top=1em,bottom=1em]{geometry}
+\usepackage{svg}
+\usepackage{parskip}
+\usepackage{pgffor}
+\newcommand{\Repeat}[2]{% \repeat already defined
+    \foreach \n in {1,...,#1}{#2}
+  }
+
+  \def\barcode{0.18\textwidth}
+
+\newcommand{\putbarcode}[1]{\includesvg[width=\barcode]{#1.svg}}
+\newcommand{\putnbarcodes}[2]{\foreach \n in {1,...,#1}{\putbarcode{#2}}}
+
+\begin{document}
+
+% \putnbarcodes{1}{1000}
+% \putnbarcodes{1}{1001}
+% \putnbarcodes{1}{1002}
+% \putnbarcodes{20}{1003}
+% \putnbarcodes{10}{1004}
+% \putnbarcodes{10}{1005}
+% \putnbarcodes{10}{1006}
+% \putnbarcodes{5}{1007}
+% \putnbarcodes{6}{1008}
+% \putnbarcodes{10}{1009}
+% \putnbarcodes{5}{1010}
+% \putnbarcodes{10}{1011}
+% \putnbarcodes{10}{1012}
+% \putnbarcodes{1}{1013}
+% \putnbarcodes{10}{1014}
+% \putnbarcodes{5}{1015}
+% \putnbarcodes{5}{1016}
+% \putnbarcodes{10}{1017}
+% \putnbarcodes{5}{1018}
+% \putnbarcodes{10}{1019}
+% \putnbarcodes{1}{1020}
+% \putnbarcodes{3}{1021}
+% \putnbarcodes{10}{1022}
+% \putnbarcodes{10}{1023}
+% \putnbarcodes{1}{1024}
+% \putnbarcodes{5}{1025}
+% \putnbarcodes{5}{1026}
+% \putnbarcodes{2}{1027}
+% \putnbarcodes{10}{1028}
+% \putnbarcodes{1}{1029}
+% \putnbarcodes{10}{1030}
+% \putnbarcodes{10}{1031}
+% \putnbarcodes{5}{1032}
+% \putnbarcodes{5}{1033}
+% \putnbarcodes{10}{1034}
+% \putnbarcodes{1}{1035}
+
+\putnbarcodes{20}{1003}
+\putnbarcodes{20}{1014}
+\putnbarcodes{20}{1015}
+\putnbarcodes{20}{1017}
+\putnbarcodes{20}{1022}
+\putnbarcodes{20}{1034}
+\putnbarcodes{10}{1005}
+\putnbarcodes{10}{1023}
+\putnbarcodes{6}{1037}
+\putnbarcodes{5}{1006}
+\putnbarcodes{5}{1011}
+\putnbarcodes{5}{1018}
+\putnbarcodes{5}{1031}
+\putnbarcodes{5}{1009}
+
+
+
+\end{document}
